@@ -1,0 +1,574 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "fa641de4-5406-4815-90e7-bcf0eac827a1",
+   "metadata": {},
+   "source": [
+    "9th february Assignment 2 python cohort-114"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d9ec38ec-1809-4731-b7c8-ebc91dfec048",
+   "metadata": {},
+   "source": [
+    "Task 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2bc6b143-fec1-45de-b762-f8c103bf4cc3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "1. Ramesh's basic salary is input through the keyboard. His dearness allowance is 40% of \n",
+    "basic salary, and house rent allowance is 20% of basic salary. Write a program to calculate \n",
+    "his gross salary. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0603b9bf-44fe-4e13-b365-3d5bf9f43a32",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Get Ramesh's basic salary from the user\n",
+    "basic_salary = float(input(\"Enter Ramesh's basic salary: \"))\n",
+    "\n",
+    "# Calculate dearness allowance (40% of basic salary)\n",
+    "da = 0.40 * basic_salary\n",
+    "\n",
+    "# Calculate house rent allowance (20% of basic salary)\n",
+    "hra = 0.20 * basic_salary\n",
+    "\n",
+    "# Calculate gross salary\n",
+    "gross_salary = basic_salary + da + hra\n",
+    "\n",
+    "# Display the result\n",
+    "print(\"Ramesh's Gross Salary is:\", gross_salary)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1ca9c69a-0e0c-4faa-a4ea-733c89e6780d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "2. The distance between two cities (in km.) is input through the keyboard. Write a program \n",
+    "to convert and print this distance in meters, feet, inches and centimeters."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3d79fc56-5af6-4703-820f-df7ad79319c2",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Get distance in kilometers from the user\n",
+    "distance_km = float(input(\"Enter distance between two cities in kilometers: \"))\n",
+    "\n",
+    "# Conversion factors\n",
+    "meters = distance_km * 1000\n",
+    "centimeters = distance_km * 100000\n",
+    "feet = distance_km * 3280.84\n",
+    "inches = distance_km * 39370.1\n",
+    "\n",
+    "# Display the results\n",
+    "print(\"Distance in meters:\", meters)\n",
+    "print(\"Distance in centimeters:\", centimeters)\n",
+    "print(\"Distance in feet:\", feet)\n",
+    "print(\"Distance in inches:\", inches)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "705c7a77-b8f0-4a52-9936-dac3fb632d74",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "3. If the marks obtained by a student in five different subjects are input through the \n",
+    "keyboard, find out the aggregate marks and percentage marks obtained by the student. \n",
+    "Assume that the maximum marks that can be obtained by a student in each subject is 100."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "32fcbeb8-7e62-4e7c-b803-197b1ba08f6b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter marks obtained in five subjects (out of 100):\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Subject 1:  85\n",
+      "Subject 2:  48\n",
+      "Subject 3:  78\n",
+      "Subject 4:  92\n",
+      "Subject 5:  84\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "----- Result -----\n",
+      "Aggregate Marks: 387.0 out of 500\n",
+      "Percentage: 77.40%\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Program to calculate aggregate and percentage marks of a student\n",
+    "\n",
+    "# Input marks for five subjects\n",
+    "print(\"Enter marks obtained in five subjects (out of 100):\")\n",
+    "mark1 = float(input(\"Subject 1: \"))\n",
+    "mark2 = float(input(\"Subject 2: \"))\n",
+    "mark3 = float(input(\"Subject 3: \"))\n",
+    "mark4 = float(input(\"Subject 4: \"))\n",
+    "mark5 = float(input(\"Subject 5: \"))\n",
+    "\n",
+    "# Calculate aggregate marks\n",
+    "aggregate = mark1 + mark2 + mark3 + mark4 + mark5\n",
+    "\n",
+    "# Maximum possible marks\n",
+    "max_marks = 5 * 100  # Each subject out of 100\n",
+    "\n",
+    "# Calculate percentage\n",
+    "percentage = (aggregate / max_marks) * 100\n",
+    "\n",
+    "# Display the results\n",
+    "print(\"\\n----- Result -----\")\n",
+    "print(f\"Aggregate Marks: {aggregate} out of {max_marks}\")\n",
+    "print(f\"Percentage: {percentage:.2f}%\")\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ecb378df-f0d0-4933-8aff-7faad4991403",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "4. Temperature of a city in Fahrenheit degrees is input through the keyboard. Write a \n",
+    "program to convert this temperature into Centigrade degrees."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "09c25313-21f5-4983-884e-044c66935d65",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter temperature in Fahrenheit:  98.6\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Temperature in Celsius: 37.00°C\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Program to convert Fahrenheit to Celsius\n",
+    "\n",
+    "# Input temperature in Fahrenheit\n",
+    "fahrenheit = float(input(\"Enter temperature in Fahrenheit: \"))\n",
+    "\n",
+    "# Convert to Celsius\n",
+    "celsius = (5 / 9) * (fahrenheit - 32)\n",
+    "\n",
+    "# Display the result\n",
+    "print(f\"Temperature in Celsius: {celsius:.2f}°C\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3ce2c166-26b0-4918-a44f-142cb819e8d1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "5. The length & breadth of a rectangle and radius of a circle are input through the \n",
+    "keyboard. Write a program to calculate the area & perimeter of the rectangle, and the area \n",
+    "& circumference of the circle."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "0db6c796-3bef-484a-aece-db34eadbfcfc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the length of the rectangle:  10\n",
+      "Enter the breadth of the rectangle:  5\n",
+      "Enter the radius of the circle:  7\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "----- Rectangle -----\n",
+      "Area: 50.00\n",
+      "Perimeter: 30.00\n",
+      "\n",
+      "----- Circle -----\n",
+      "Area: 153.94\n",
+      "Circumference: 43.98\n"
+     ]
+    }
+   ],
+   "source": [
+    "import math  # For using pi\n",
+    "\n",
+    "# Input length and breadth of the rectangle\n",
+    "length = float(input(\"Enter the length of the rectangle: \"))\n",
+    "breadth = float(input(\"Enter the breadth of the rectangle: \"))\n",
+    "\n",
+    "# Calculate area and perimeter of the rectangle\n",
+    "rect_area = length * breadth\n",
+    "rect_perimeter = 2 * (length + breadth)\n",
+    "\n",
+    "# Input radius of the circle\n",
+    "radius = float(input(\"Enter the radius of the circle: \"))\n",
+    "\n",
+    "# Calculate area and circumference of the circle\n",
+    "circle_area = math.pi * radius * radius\n",
+    "circle_circumference = 2 * math.pi * radius\n",
+    "\n",
+    "# Display the results\n",
+    "print(\"\\n----- Rectangle -----\")\n",
+    "print(f\"Area: {rect_area:.2f}\")\n",
+    "print(f\"Perimeter: {rect_perimeter:.2f}\")\n",
+    "\n",
+    "print(\"\\n----- Circle -----\")\n",
+    "print(f\"Area: {circle_area:.2f}\")\n",
+    "print(f\"Circumference: {circle_circumference:.2f}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "17f6dbb3-fefa-45db-831e-0b5cf591f274",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "6. Two numbers are input through the keyboard into two locations C and D. Write a \n",
+    "program to interchange the contents of C and D."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "4554189b-2401-48bd-9e9c-f935fde38943",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter value for C:  5\n",
+      "Enter value for D:  10\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Before swapping: C = 5.0, D = 10.0\n",
+      "After swapping: C = 10.0, D = 5.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Input two numbers\n",
+    "C = float(input(\"Enter value for C: \"))\n",
+    "D = float(input(\"Enter value for D: \"))\n",
+    "\n",
+    "# Display original values\n",
+    "print(f\"\\nBefore swapping: C = {C}, D = {D}\")\n",
+    "\n",
+    "# Swap the values\n",
+    "C, D = D, C\n",
+    "\n",
+    "# Display swapped values\n",
+    "print(f\"After swapping: C = {C}, D = {D}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "695beb07-1888-496b-8cad-aad5d035d300",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "7. If a five-digit number is input through the keyboard, write a program to calculate the \n",
+    "sum of its digits. ( Hint: Use the modulus operator '%')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "0a36ab53-ec1e-4b47-911b-cc2b3081e6c4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a five-digit number:  54321\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Sum of digits: 15\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Input a five-digit number\n",
+    "number = int(input(\"Enter a five-digit number: \"))\n",
+    "\n",
+    "# Ensure it's a five-digit number\n",
+    "if 10000 <= number <= 99999:\n",
+    "    # Initialize sum\n",
+    "    digit_sum = 0\n",
+    "\n",
+    "    # Loop to extract and add each digit\n",
+    "    while number > 0:\n",
+    "        digit = number % 10        # Get the last digit\n",
+    "        digit_sum += digit         # Add it to the sum\n",
+    "        number = number // 10      # Remove the last digit\n",
+    "\n",
+    "    # Display the result\n",
+    "    print(\"Sum of digits:\", digit_sum)\n",
+    "else:\n",
+    "    print(\"Error: Please enter a valid five-digit number.\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d5250a6a-0735-4e42-af6d-fb6fab3365e7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "8. If a five-digit number is input through the keyboard, write a program to reverse the \n",
+    "number."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "447e77ce-7bbf-406e-bf91-0223d58cb8f9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a five-digit number:  12345\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Reversed Number: 54321\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Input a five-digit number\n",
+    "number = int(input(\"Enter a five-digit number: \"))\n",
+    "\n",
+    "# Check if it's a valid five-digit number\n",
+    "if 10000 <= number <= 99999:\n",
+    "    reversed_number = 0\n",
+    "    temp = number\n",
+    "\n",
+    "    # Extract and reverse digits\n",
+    "    while temp > 0:\n",
+    "        digit = temp % 10\n",
+    "        reversed_number = reversed_number * 10 + digit\n",
+    "        temp = temp // 10\n",
+    "\n",
+    "    # Display the reversed number\n",
+    "    print(\"Reversed Number:\", reversed_number)\n",
+    "else:\n",
+    "    print(\"Error: Please enter a valid five-digit number.\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "dbc9d35c-fc9d-40c7-a3bf-a2264756bb31",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "9. If a four-digit number is input through the keyboard, write a program to obtain the sum \n",
+    "of the first and last digit of this number."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "cc41751d-3842-404c-a2f1-aee598ab3be9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a four-digit number:  4567\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "First Digit: 4\n",
+      "Last Digit: 7\n",
+      "Sum of First and Last Digits: 11\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Input a four-digit number\n",
+    "number = int(input(\"Enter a four-digit number: \"))\n",
+    "\n",
+    "# Check if it's a valid four-digit number\n",
+    "if 1000 <= number <= 9999:\n",
+    "    last_digit = number % 10            # Extract last digit\n",
+    "    first_digit = number // 1000        # Extract first digit\n",
+    "\n",
+    "    digit_sum = first_digit + last_digit\n",
+    "\n",
+    "    # Display the result\n",
+    "    print(f\"First Digit: {first_digit}\")\n",
+    "    print(f\"Last Digit: {last_digit}\")\n",
+    "    print(f\"Sum of First and Last Digits: {digit_sum}\")\n",
+    "else:\n",
+    "    print(\"Error: Please enter a valid four-digit number.\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4165c6d4-c2ea-435e-bea8-22521116d459",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "10. In a town, the percentage of men is 52. The percentage of total literacy is 48. If total \n",
+    "percentage of literate men is 35 of the total population, write a program to find the total \n",
+    "number of illiterate men and women if the population of the town is 80,000.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "e9aec23c-a4dd-4d03-a9cd-fb7b89902570",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Illiterate Men: 13600\n",
+      "Illiterate Women: 28000\n",
+      "Total Illiterate People: 41600\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Total population\n",
+    "population = 80000\n",
+    "\n",
+    "# Percentages\n",
+    "men_percent = 52\n",
+    "literacy_percent = 48\n",
+    "literate_men_percent = 35\n",
+    "\n",
+    "# Calculated values\n",
+    "total_men = (men_percent / 100) * population\n",
+    "total_women = population - total_men\n",
+    "\n",
+    "total_literate = (literacy_percent / 100) * population\n",
+    "literate_men = (literate_men_percent / 100) * population\n",
+    "illiterate_men = total_men - literate_men\n",
+    "\n",
+    "literate_women = total_literate - literate_men\n",
+    "illiterate_women = total_women - literate_women\n",
+    "\n",
+    "# Display results\n",
+    "print(\"Illiterate Men:\", int(illiterate_men))\n",
+    "print(\"Illiterate Women:\", int(illiterate_women))\n",
+    "print(\"Total Illiterate People:\", int(illiterate_men + illiterate_women))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ca570a26-faf4-43a9-8c4d-61fc5aa362d7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "11. A cashier has currency notes of denominations 10, 50 and 100. If the amount to be \n",
+    "withdrawn is input through the keyboard in hundreds, find the total number of currency \n",
+    "notes of each denomination the cashier will have to give to the withdrawer."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
